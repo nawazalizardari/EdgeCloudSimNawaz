@@ -42,8 +42,7 @@ public class SimSettings {
 
 	// enumarations for the VM types
 	public static enum NETWORK_DELAY_TYPES {
-		WLAN_DELAY, MAN_DELAY, WAN_DELAY, FIVEG_DELAY,
-	 GSM_DELAY }
+		WLAN_DELAY, MAN_DELAY, WAN_DELAY, FIVEG_DELAY}
 
 	// predifined IDs for the components.
 	public static final int CLOUD_DATACENTER_ID = 1000;
@@ -211,20 +210,7 @@ public class SimSettings {
 			if (!EDGE_DEVICE_FILE.isEmpty())
 				edgeDevicesFile = EDGE_DEVICE_FILE;
 
-			WIFIDEVICETRANSMISSIONWATTHOURPERBIT = (double) 2.7777777777778e-13
-					* Double.parseDouble(prop.getProperty("wifi_device_transmission_nanojoules_per_bit"));
-			WIFIDEVICERECEPTIONWATTHOURPERBIT = (double) 2.7777777777778e-13
-					* Double.parseDouble(prop.getProperty("wifi_device_reception_nanojoules_per_bit"));
-
-			WIFIACCESSPOINTTRANSMISSIONWATTHOURPERBIT = (double) 2.7777777777778e-13
-					* Double.parseDouble(prop.getProperty("wifi_access_point_transmission_nanojoules_per_bit"));
-			WIFIACCESSPOINTRECEPTIONWATTHOURPERBIT = (double) 2.7777777777778e-13
-					* Double.parseDouble(prop.getProperty("wifi_access_point_reception_nanojoules_per_bit"));
-
-			CELLULARDEVICETRANSMISSIONWATTHOURPERBIT = (double) 2.7777777777778e-13
-					* Double.parseDouble(prop.getProperty("cellular_device_transmission_nanojoules_per_bit"));
-			CELLULARDEVICERECEPTIONWATTHOURPERBIT = (double) 2.7777777777778e-13
-					* Double.parseDouble(prop.getProperty("cellular_device_reception_nanojoules_per_bit"));
+	
 
 		} catch (IOException ex) {
 			ex.printStackTrace();
@@ -745,35 +731,6 @@ public class SimSettings {
 		}
 	}
 
-	public double getWifiAccessPointTransmissionWattHourPerBit() {
-		return WIFIACCESSPOINTTRANSMISSIONWATTHOURPERBIT;
-	}
 
-	public double getWifiAccessPointReceptionWattHourPerBit() {
-		return WIFIACCESSPOINTRECEPTIONWATTHOURPERBIT;
-	}
-
-	public double getWifiDeviceTransmissionWattHourPerBit() {
-		return WIFIDEVICETRANSMISSIONWATTHOURPERBIT;
-	}
-
-	public double getWifiDeviceReceptionWattHourPerBit() {
-		return WIFIDEVICERECEPTIONWATTHOURPERBIT;
-	}
-
-	public double getCellularDeviceTransmissionWattHourPerBit() {
-		return CELLULARDEVICETRANSMISSIONWATTHOURPERBIT;
-	}
-
-	public double getCellularDeviceReceptionWattHourPerBit() {
-		return CELLULARDEVICERECEPTIONWATTHOURPERBIT;
-	}
-
-	private double WIFIDEVICETRANSMISSIONWATTHOURPERBIT;
-	private double WIFIDEVICERECEPTIONWATTHOURPERBIT;
-	private double WIFIACCESSPOINTTRANSMISSIONWATTHOURPERBIT;
-	private double WIFIACCESSPOINTRECEPTIONWATTHOURPERBIT;
-	private double CELLULARDEVICETRANSMISSIONWATTHOURPERBIT;
-	private double CELLULARDEVICERECEPTIONWATTHOURPERBIT;
 
 }
